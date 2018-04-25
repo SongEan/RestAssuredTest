@@ -49,7 +49,7 @@ public class BaiduTest {
                         .body("shopping.category.item.findAll{it.price==20}.name",equalTo("Paper"))
                         .body("**.findAll{it.price==20}.name",equalTo("Paper"))
                         .body("shopping.category.item.findAll{it.name=='Paper'}.price",equalTo("20"))
-                        .body("shopping.category.find{item->item.price==20}.price",equalTo(20));
+                        .body("shopping.category.item.find{item->item.price==20}.price",equalTo("20"));
         //.extract().response();
         System.out.println();
     }
